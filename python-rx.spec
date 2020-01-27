@@ -21,7 +21,7 @@ Summary:        Reactive Extensions (Rx) for Python
 License:        ASL 2.0
 URL:            https://github.com/ReactiveX/RxPY
 # PyPI tarball doesn't have tests
-Source0:        %{url}/archive/v%{version}/%{srcname}-%{version}.tar.gz
+Source0:        %{url}/archive/v%{version}/RxPY-%{version}.tar.gz
 BuildArch:      noarch
 BuildRequires:  python-coverage
 BuildRequires:  python-devel
