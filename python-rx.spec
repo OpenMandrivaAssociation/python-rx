@@ -43,10 +43,7 @@ rm -rf %{eggname}.egg-info
 %install
 %py_install
 
-%if %{with tests}
-%check
-PYTHONPATH=%{buildroot}%{python_sitelib} %{__python} setup.py test
-%endif
+
 
 %files
 %license LICENSE
