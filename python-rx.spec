@@ -16,7 +16,7 @@ observable collections and LINQ-style query operators in Python.
 
 Name:           python-%{pkgname}
 Version:        3.1.1
-Release:        1
+Release:        2
 Summary:        Reactive Extensions (Rx) for Python
 License:        ASL 2.0
 URL:            https://github.com/ReactiveX/RxPY
