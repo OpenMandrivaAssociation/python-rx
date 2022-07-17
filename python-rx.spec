@@ -29,21 +29,20 @@ BuildRequires:  python-pytest
 BuildRequires:  python-pytest-asyncio
 BuildRequires:  python-pytest-runner
 BuildRequires:  python-setuptools
+BuildRequires:  python-pip
+BuildRequires:  python-wheel
 %{?python_provide:%python_provide python-%{pkgname}}
 
 %description %{_description}
 
 %prep
 %autosetup -n RxPY-%{version}
-rm -rf %{eggname}.egg-info
 
-%build
-%py_build
+mkdir wheels
+pip wheel --wheel-dir wheels --no-deps --no-build-isolation --verbose .
 
 %install
-%py_install
-
-
+pip install --root=%{buildroot} --no-deps --verbose --ignore-installed --no-warn-script-location --no-index --no-cache-dir --find-links wheels wheels/*.whl
 
 %files
 %license LICENSE
